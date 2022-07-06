@@ -1,0 +1,182 @@
+
+/* Top Section with address, phone, email, and social links */ 
+
+#top_section {
+
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    height: 65px;
+
+}
+
+#top_wrapper {
+
+
+    @include create_row_or_column(row);
+    justify-content: space-between;
+    width: 65%;
+    font-size: 14px;
+
+}
+
+#top_left {
+
+    @include flex_direction_align_justify(row, center, center); 
+
+}
+
+.top_info_container {
+
+    @include create_row_or_column(row);
+    padding-right: 30px;
+    color: $base_font_color;
+
+}
+
+.top_info_container p:first-child {
+
+    padding-right: 5px;
+    font-weight: 600;
+
+}
+
+.top_info {
+
+    color: $line_color;
+    font-weight: 100;
+
+}
+
+#top_right {
+
+    @include flex_direction_align_justify(row, center, center); 
+
+}
+
+.social_links {
+
+    color: $secondary_font_color;
+    padding-left: 29px;
+
+}
+
+
+@media only screen and (max-width: 1448px) {
+
+    #top_wrapper {
+
+        width: 80%;
+
+    }
+    
+}
+
+@media only screen and (max-width: 1182px) {
+
+    #top_wrapper {
+
+        width: 95%;
+
+    }
+
+    .top_info_container {
+
+        padding-right: 0;
+
+    }
+
+    #top_left {
+
+        @include flex_direction_align_justify(row, center, space-around); 
+
+    }    
+}
+
+@media only screen and (max-width: 992px) {
+
+    #top_section {
+
+        height: 80px;
+
+    }
+
+    #top_wrapper {
+
+        @include create_row_or_column(column);
+        justify-content: center;
+
+    }
+
+    #top_right {
+
+        padding-bottom: 10px;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+
+    }
+
+    .social_links {
+
+        padding-left: 0;
+        
+
+    }
+    
+}
+
+@media only screen and (max-width: 844px) {
+
+    #top_section {
+
+        height: 100px;
+
+    }
+
+    .top_info_container {
+
+        @include create_row_or_column(column);
+
+    }
+
+    #top_left {
+
+        padding-bottom: 5px;
+
+    }
+
+    .top_info_container p {
+
+        margin-top: 5px;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #top_right {
+
+        margin-top: 10px;
+
+    }
+    
+}
+
+@media only screen and (max-width: 620px) {
+
+    #top_section {
+
+        height: 200px;
+
+    }
+
+    #top_left {
+
+        @include flex_direction_align_justify(column, center, center); 
+
+    }
+    
+}
+

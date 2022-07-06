@@ -1,0 +1,35 @@
+$base_color: white;
+$secondary_color: #222d35;
+$tertiary_color: #98bc8c;
+$fourth_color: #1face1;
+$fifth_color: #024aae;
+
+$base_font_color: rgb(63, 63, 63);
+$secondary_font_color: rgb(109, 109, 109);
+
+$line_color: rgb(109, 109, 109);
+
+body {
+
+    margin: 0;
+    font-family: "Ubuntu", Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+
+}
+
+@mixin flex_direction_align_justify($direction, $itemAlign, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $itemAlign;
+    justify-content: $justify;
+    
+}
+
+@mixin create_row_or_column($setting) {
+
+    display: flex;
+    flex-direction: $setting;
+
+}
+
