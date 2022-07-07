@@ -16,7 +16,7 @@
     @include create_row_or_column(row);
     justify-content: space-between;
     width: 65%;
-    font-size: 14px;
+    font-size: 12px;
 
 }
 
@@ -80,12 +80,6 @@
 
     }
 
-    .top_info_container {
-
-        padding-right: 0;
-
-    }
-
     #top_left {
 
         @include flex_direction_align_justify(row, center, space-around); 
@@ -98,6 +92,12 @@
     #top_section {
 
         height: 80px;
+
+    }
+
+    .top_info_container {
+
+        padding-right: 0;
 
     }
 

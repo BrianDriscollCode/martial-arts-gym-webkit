@@ -1,3 +1,10 @@
+/* 
+
+Main Break Points for Media Queries
+
+1448px | 1182px | 992px | 844px | 620px
+
+*/
 body {
   margin: 0;
   font-family: "Ubuntu", Tahoma, Geneva, sans-serif;
@@ -18,7 +25,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 65%;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #top_left {
@@ -67,10 +74,6 @@ body {
     width: 95%;
   }
 
-  .top_info_container {
-    padding-right: 0;
-  }
-
   #top_left {
     display: flex;
     flex-direction: row;
@@ -81,6 +84,10 @@ body {
 @media only screen and (max-width: 992px) {
   #top_section {
     height: 80px;
+  }
+
+  .top_info_container {
+    padding-right: 0;
   }
 
   #top_wrapper {
@@ -138,6 +145,39 @@ body {
     justify-content: center;
   }
 }
+#navigation {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(184, 184, 184);
+  height: 105px;
+}
+
+#navigation_wrapper {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navigation_list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_link {
+  padding-right: 25px;
+  font-weight: 500;
+}
+
+#free_pass_button {
+  border: 1px solid #1face1;
+  color: #1face1;
+  padding: 20px;
+}
+
 #main_body {
   background-color: white;
 }/*# sourceMappingURL=main.css.map */

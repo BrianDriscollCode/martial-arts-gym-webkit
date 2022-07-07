@@ -1,0 +1,36 @@
+#navigation {
+
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    height: 105px;
+
+}
+
+#navigation_wrapper {
+
+    width: 65%;
+    @include flex_direction_align_justify(row, center, space-between)
+
+}
+
+#navigation_list {
+
+    @include flex_direction_align_justify(row, center, center) 
+
+}
+
+.nav_link {
+
+    padding-right: 25px;
+    font-weight: 500;
+
+}
+
+#free_pass_button {
+
+    border: 1px solid $fourth_color;
+    color: $fourth_color;
+    padding: 20px;
+
+}

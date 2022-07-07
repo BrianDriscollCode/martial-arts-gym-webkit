@@ -9,6 +9,14 @@ $secondary_font_color: rgb(109, 109, 109);
 
 $line_color: rgb(109, 109, 109);
 
+/* 
+
+Main Break Points for Media Queries
+
+1448px | 1182px | 992px | 844px | 620px
+
+*/
+
 body {
 
     margin: 0;
@@ -26,10 +34,10 @@ body {
     
 }
 
-@mixin create_row_or_column($setting) {
+@mixin create_row_or_column($direction) {
 
     display: flex;
-    flex-direction: $setting;
+    flex-direction: $direction;
 
 }
 
