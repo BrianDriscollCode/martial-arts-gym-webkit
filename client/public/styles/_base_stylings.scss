@@ -2,7 +2,8 @@ $base_color: white;
 $secondary_color: #222d35;
 $tertiary_color: #98bc8c;
 $fourth_color: #1face1;
-$fifth_color: #024aae;
+$fifth_color: #1969da;
+$sixth_color: #bdedff;
 
 $base_font_color: rgb(63, 63, 63);
 $secondary_font_color: rgb(109, 109, 109);
@@ -23,6 +24,13 @@ body {
     font-family: "Ubuntu", Tahoma, Geneva, sans-serif;
     font-size: 16px;
     letter-spacing: 0.5px;
+
+}
+
+h1 {
+
+    margin-top: 0;
+    margin-bottom: 0;
 
 }
 

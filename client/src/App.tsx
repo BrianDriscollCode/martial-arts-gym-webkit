@@ -2,10 +2,10 @@
 import axios from "axios";
 import React, { useState, useEffect }from "react";
 import Header from "./Header";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //pages
-import Home from "./body/Home";
+import Home from "./body/home/Home";
 import About from "./body/About";
 import Schedule from "./body/Schedule";
 import Classes from "./body/Classes";
@@ -31,7 +31,7 @@ const App = () => {
     }, [])
 
     return (
-        <HashRouter>
+        <BrowserRouter>
         <div id="main_body">
 
             <Header />
@@ -55,7 +55,7 @@ const App = () => {
             <button onClick={callAPI}> get response </button> */}
     
         </div>
-        </HashRouter>
+        </BrowserRouter>
     
     )
     
