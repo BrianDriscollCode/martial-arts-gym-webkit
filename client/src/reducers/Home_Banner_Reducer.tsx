@@ -29,7 +29,7 @@ const banner_list = [
     },
     {
 
-        title: "Elite Grapping Training",
+        title: "Elite Grappling Training",
         tagline: "Confidence and Skill Building for Beginner and Advanced",
         image_link: `url("/banner/class.jpg")`,
         buttonAmount: 1,

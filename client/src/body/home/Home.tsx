@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "./Banner"
+import First_Section from "./First_Section";
 
 const Home = () => {
 
@@ -8,8 +9,7 @@ const Home = () => {
         <div>
 
             <Banner />
-            <h2> Test </h2>
-            <p> test </p>
+            <First_Section />
             
 
         </div>
