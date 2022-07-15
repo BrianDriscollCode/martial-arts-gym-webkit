@@ -1,0 +1,58 @@
+#instructor_section {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+#instructor_container {
+
+    @include flex_direction_align_justify(row, center, space-around);
+    align-self: center;
+    width: 90%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    flex-wrap: wrap;
+
+}
+
+.instructor_card {
+
+    @include flex_direction_align_justify(column, none, none)
+
+}
+
+.instructor_card h4 {
+
+    margin-top: 0;
+
+}
+
+
+.instructor_photo {
+
+    width: 300;
+    height: 390;
+
+}
+
+.instructor_label {
+
+    text-align: center;
+
+}
+
+.instructor_label h4 {
+
+    margin-bottom: 0;
+    color: $fourth_color;
+    opacity: 0.6;
+
+}
+
+.instructor_label h3 {
+
+    font-size: 20px;
+    margin-top: 0;
+
+}

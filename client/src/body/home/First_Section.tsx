@@ -5,10 +5,13 @@ const First_Section = () => {
 
     return (
 
-        <div id="textBox">
+        <div id="first_section">
 
-            <h1> First Title of Test </h1>
-            <h2> Second Title of Test</h2> 
+            <div id="first_section_titles_container">
+                <h1 id="title1"> GRACIE JIU JITSU {'&'} MIXED MARTIAL ARTS </h1>
+                <h2 id="title2"> Where your martial arts journey begins </h2> 
+            </div>
+            
 
             <div id="first_section_content"> 
 
@@ -18,35 +21,32 @@ const First_Section = () => {
                     <p> Paulo Fernando is the head instructor of San Diego Brazilian Jiu Jitsu Academy & Mixed Martial Arts and was promoted to a 4th degree black belt by Master Carlson Gracie Senior on November 13th of 2005. Today Mr. Fernando is a 6th Degree Black belt in Brazilian Jiu Jitsu and 6th Degree Red and White belt in Judo. </p>
 
                     <div>
-                        <button> Learn more </button>
-                        <button> See Classes </button>
+                        <button className="page_button_ first_button_spacing_"> Learn more </button>
+                        <button className="page_button_ second_button_spacing_"> See Classes </button>
                     </div>
 
 
                 </div>
 
-                <div className="portfolio_explanation" id="videos">
+                <div className="introduction_video_container" id="videos">
 
-    
+                    <div id="introduction_video_wrapper">
 
-                <div id="portfolio_video">
+                        <div className="iframe_container">
+                            
+                            <iframe 
+                            width="624"
+                            height="351"
+                            src="https://www.youtube.com/embed/lG4d4cy90Tc"
+                            title="YouTube video player" 
+                            frameBorder="0" 
+                            className="video_iframe">
+                            </iframe>
+
+                        </div>
                     
-                    <h2> Portfolio Explanation </h2>
-
-                    <div className="iframe_container">
-                        <iframe 
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/lG4d4cy90Tc"
-                        title="YouTube video player" 
-                        frameBorder="0" 
-                        className="video_iframe">
-                        </iframe>
 
                     </div>
-                    
-
-                </div>
 
             </div>
 

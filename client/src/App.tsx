@@ -2,6 +2,7 @@
 import axios from "axios";
 import React, { useState, useEffect }from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //pages
@@ -54,6 +55,7 @@ const App = () => {
             <p> {apiResponse} </p>
             <button onClick={callAPI}> get response </button> */}
     
+            <Footer />
         </div>
         </BrowserRouter>
     

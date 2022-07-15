@@ -16,6 +16,16 @@ Main Break Points for Media Queries
 
 1448px | 1182px | 992px | 844px | 620px
 
+******************************************
+
+Common stylings used for different pages end with _
+
+Example: #page_button_
+
+******************************************
+
+Mixins stored in this file
+
 */
 
 body {
@@ -31,6 +41,28 @@ h1 {
 
     margin-top: 0;
     margin-bottom: 0;
+
+}
+
+.page_button_ {
+
+    background-color: $fifth_color;
+    border-radius: 5px;
+    padding: 15px 35px 15px 35px;
+    color: white;
+    border: none;
+
+}
+
+.first_button_spacing_ {
+
+    margin-right: 10px;
+
+}
+
+.second_button_spacing_ {
+
+    margin-left: 10px;
 
 }
 

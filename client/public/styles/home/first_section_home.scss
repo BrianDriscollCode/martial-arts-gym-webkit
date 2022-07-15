@@ -1,0 +1,154 @@
+#first_section {
+
+    margin-top: 5em;
+    margin-bottom: 5em;
+    @include flex_direction_align_justify(column, center, center);
+    
+}
+
+#first_section_titles_container {
+
+    margin-bottom: 1em;
+    @include flex_direction_align_justify(column, center, center)
+}
+
+#title1 {
+
+    font-size: 22px;
+
+}
+
+#title2 {
+
+    font-size: 36px;
+
+}
+
+#first_section_content {
+
+    width: 70%;
+    @include flex_direction_align_justify(row, none, space-between);
+    align-self: center;
+
+}
+
+#first_section_text_area {
+
+    width: 49.5%;
+
+}
+
+#introduction_video_container {
+
+    width: 49.5%;
+
+}
+
+#first_section_text_area p {
+
+    margin-top: 0;
+
+}
+
+/* Media Queries */ 
+
+@media only screen and (max-width: 1650px) {
+
+   #first_section_content {
+
+        width: 90%;
+
+   }
+
+   #first_section_text_area {
+
+        width: 49.9%;
+
+    }
+
+    #introduction_video_container {
+
+        width: 49.9%;
+
+    }
+
+}
+
+@media only screen and (max-width: 1448px) {
+
+    
+   .iframe_container iframe {
+
+        width: 500px;
+        height: 281px;
+
+   }
+
+}
+
+@media only screen and (max-width: 1182px) {
+
+    #first_section_content {
+
+        @include flex_direction_align_justify(column, center, center);
+       
+    }
+
+
+    #first_section_text_area {
+
+        width: 80%;
+        margin-bottom: 3em;
+
+    }
+
+    .iframe_container iframe {
+
+        width: 700px;
+        height: 394px;
+
+   }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+   
+
+}
+
+@media only screen and (max-width: 844px) {
+
+    #first_section_titles_container {
+
+        text-align: center;
+
+    }
+
+    .iframe_container iframe {
+
+        width: 500px;
+        height: 281px;
+
+   }
+   
+
+}
+
+@media only screen and (max-width: 620px) {
+   
+    .iframe_container iframe {
+
+        width: 335px;
+        height: 188px;
+
+   }
+   
+   #first_section_text_area {
+
+    width: 90%;
+
+}
+
+
+}

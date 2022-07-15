@@ -1,0 +1,45 @@
+#benefits_section {
+
+    color: white;
+    height: 400px;
+    @include flex_direction_align_justify(row, center, center);
+
+}
+
+#benefits_container {
+
+    @include flex_direction_align_justify(row, center, space-between);
+    width: 90%;
+
+}
+
+#empty_benefits_container {
+
+    width: 50%;
+
+}
+
+#benefits_list {
+
+    width: 50%;
+
+}
+
+.benefits_item {
+
+    @include flex_direction_align_justify(row, center, flex-start);
+    
+
+}
+
+.benefits_item i {
+
+    margin-right: 10px;
+
+}
+
+#benefits_about_button {
+
+    margin-top: 19.20px;
+
+}

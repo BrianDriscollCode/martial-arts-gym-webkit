@@ -14,24 +14,47 @@
 
 @keyframes appear_and_move {
 
-    from {opacity: 0; transform: translate(0, 35px)}
-    to {opacity: 1; transform: translate(0, 0)}
+    0% {opacity: 0; transform: translate(0, 35px)}
+    30% {opacity: 0; transform: translate(0, 35px)}
+    100% {opacity: 1; transform: translate(0, 0)}
 
 }
 
 #banner_section {
 
     background-color: black;
+    position: relative;
+    top: 0;
+    left: 0;
+    
 
 }
 
-#banner_div {
+#banner_div_1 {
 
     height: 800px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 20;
     @include flex_direction_align_justify(column, center, center);
-    transition: visibility 1.5s;
     
 }
+
+#banner_div_2 {
+
+    height: 800px;
+    transition: visibility 1.5s;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    @include flex_direction_align_justify(column, center, center);
+    background-color: aqua;
+    z-index: 30;
+   
+}
+
 
 
 #inside_banner {
@@ -42,6 +65,7 @@
     opacity: 1;
     animation-name: appear_and_move;
     animation-duration: 1.6s;
+    color: white;
 
 }
 
@@ -73,11 +97,18 @@
 
 }
 
+#lone_button {
+
+    animation-name: move2;
+    animation-duration: 2.3s;
+
+}
+
 #button1 {
 
     margin-right: 10px;
     animation-name: move1;
-    animation-duration: 1.3s;
+    animation-duration: 2.3s;
 
 }
 
@@ -85,7 +116,7 @@
 
     margin-left: 10px;
     animation-name: move2;
-    animation-duration: 1.3s;
+    animation-duration: 2.3s;
 
 }
 

@@ -4,6 +4,16 @@ Main Break Points for Media Queries
 
 1448px | 1182px | 992px | 844px | 620px
 
+******************************************
+
+Common stylings used for different pages end with _
+
+Example: #page_button_
+
+******************************************
+
+Mixins stored in this file
+
 */
 body {
   margin: 0;
@@ -15,6 +25,22 @@ body {
 h1 {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.page_button_ {
+  background-color: #1969da;
+  border-radius: 5px;
+  padding: 15px 35px 15px 35px;
+  color: white;
+  border: none;
+}
+
+.first_button_spacing_ {
+  margin-right: 10px;
+}
+
+.second_button_spacing_ {
+  margin-left: 10px;
 }
 
 /* Top Section with address, phone, email, and social links */
@@ -245,6 +271,68 @@ h1 {
     margin-top: 20px;
   }
 }
+#footer {
+  height: 500px;
+  background-color: #222d35;
+  color: white;
+}
+
+#footer_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.footer_section {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+  text-align: center;
+}
+
+.footer_section img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer_section .social_links {
+  padding-left: 0px;
+}
+
+#footer_social_links {
+  width: 30%;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer_info p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.footer_info h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.footer_info h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.footer_info {
+  margin-bottom: 25px;
+}
+
+/* Home Section Stylings */
 @-webkit-keyframes move1 {
   from {
     transform: translate(0, 20px);
@@ -278,36 +366,65 @@ h1 {
   }
 }
 @-webkit-keyframes appear_and_move {
-  from {
+  0% {
     opacity: 0;
     transform: translate(0, 35px);
   }
-  to {
+  30% {
+    opacity: 0;
+    transform: translate(0, 35px);
+  }
+  100% {
     opacity: 1;
     transform: translate(0, 0);
   }
 }
 @keyframes appear_and_move {
-  from {
+  0% {
     opacity: 0;
     transform: translate(0, 35px);
   }
-  to {
+  30% {
+    opacity: 0;
+    transform: translate(0, 35px);
+  }
+  100% {
     opacity: 1;
     transform: translate(0, 0);
   }
 }
 #banner_section {
   background-color: black;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
-#banner_div {
+#banner_div_1 {
   height: 800px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#banner_div_2 {
+  height: 800px;
   transition: visibility 1.5s;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  z-index: 30;
 }
 
 #inside_banner {
@@ -319,6 +436,7 @@ h1 {
           animation-name: appear_and_move;
   -webkit-animation-duration: 1.6s;
           animation-duration: 1.6s;
+  color: white;
 }
 
 #inside_banner h1 {
@@ -342,20 +460,27 @@ h1 {
   border: none;
 }
 
+#lone_button {
+  -webkit-animation-name: move2;
+          animation-name: move2;
+  -webkit-animation-duration: 2.3s;
+          animation-duration: 2.3s;
+}
+
 #button1 {
   margin-right: 10px;
   -webkit-animation-name: move1;
           animation-name: move1;
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
+  -webkit-animation-duration: 2.3s;
+          animation-duration: 2.3s;
 }
 
 #button2 {
   margin-left: 10px;
   -webkit-animation-name: move2;
           animation-name: move2;
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
+  -webkit-animation-duration: 2.3s;
+          animation-duration: 2.3s;
 }
 
 #banner_arrow_container a {
@@ -365,6 +490,192 @@ h1 {
 /* Media Queries */
 #banner_div {
   color: white;
+}
+
+#first_section {
+  margin-top: 5em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#first_section_titles_container {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title1 {
+  font-size: 22px;
+}
+
+#title2 {
+  font-size: 36px;
+}
+
+#first_section_content {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: none;
+  justify-content: space-between;
+  align-self: center;
+}
+
+#first_section_text_area {
+  width: 49.5%;
+}
+
+#introduction_video_container {
+  width: 49.5%;
+}
+
+#first_section_text_area p {
+  margin-top: 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1650px) {
+  #first_section_content {
+    width: 90%;
+  }
+  #first_section_text_area {
+    width: 49.9%;
+  }
+  #introduction_video_container {
+    width: 49.9%;
+  }
+}
+@media only screen and (max-width: 1448px) {
+  .iframe_container iframe {
+    width: 500px;
+    height: 281px;
+  }
+}
+@media only screen and (max-width: 1182px) {
+  #first_section_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #first_section_text_area {
+    width: 80%;
+    margin-bottom: 3em;
+  }
+  .iframe_container iframe {
+    width: 700px;
+    height: 394px;
+  }
+}
+@media only screen and (max-width: 844px) {
+  #first_section_titles_container {
+    text-align: center;
+  }
+  .iframe_container iframe {
+    width: 500px;
+    height: 281px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .iframe_container iframe {
+    width: 335px;
+    height: 188px;
+  }
+  #first_section_text_area {
+    width: 90%;
+  }
+}
+#benefits_section {
+  color: white;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#benefits_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+
+#empty_benefits_container {
+  width: 50%;
+}
+
+#benefits_list {
+  width: 50%;
+}
+
+.benefits_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.benefits_item i {
+  margin-right: 10px;
+}
+
+#benefits_about_button {
+  margin-top: 19.2px;
+}
+
+#instructor_section {
+  display: flex;
+  justify-content: center;
+}
+
+#instructor_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  align-self: center;
+  width: 90%;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  flex-wrap: wrap;
+}
+
+.instructor_card {
+  display: flex;
+  flex-direction: column;
+  align-items: none;
+  justify-content: none;
+}
+
+.instructor_card h4 {
+  margin-top: 0;
+}
+
+.instructor_photo {
+  width: 300;
+  height: 390;
+}
+
+.instructor_label {
+  text-align: center;
+}
+
+.instructor_label h4 {
+  margin-bottom: 0;
+  color: #1face1;
+  opacity: 0.6;
+}
+
+.instructor_label h3 {
+  font-size: 20px;
+  margin-top: 0;
 }
 
 #main_body {
