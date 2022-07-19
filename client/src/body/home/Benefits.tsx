@@ -42,7 +42,9 @@ const Benefits = () => {
                         <p> Learn Boxing, Jiu Jitsu, MMA, and more! </p>
                     </div>
 
-                    <button className="page_button_" id="benefits_about_button"> About  </button>
+                    <div id="benefits_button_container">
+                        <button className="page_button_" id="benefits_about_button"> About  </button>
+                    </div>
                 </div>
 
             </div>

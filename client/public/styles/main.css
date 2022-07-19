@@ -282,8 +282,10 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer_section {
@@ -298,10 +300,12 @@ h1 {
 .footer_section img {
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 75px;
 }
 
 .footer_section .social_links {
   padding-left: 0px;
+  color: white;
 }
 
 #footer_social_links {
@@ -332,6 +336,63 @@ h1 {
   margin-bottom: 25px;
 }
 
+.footer_info button {
+  background-color: #1face1; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+.footer_info h4 {
+  color: #1face1;
+  font-size: 14px;
+}
+
+.footer_info h3 {
+  font-size: 25px;
+  padding: 0 20px 0 20px;
+}
+
+#left_side_wrapper .footer_info p {
+  padding: 0 40px 40px 40px;
+}
+
+#footer_info_location {
+  padding: 0 40px 0 40px;
+}
+
+@media only screen and (max-width: 1182px) {
+  #footer_wrapper {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #footer {
+    height: 950px;
+  }
+  #footer_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer_section {
+    width: 95%;
+  }
+  #logo_social_footer {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 844px) {
+  #footer {
+    height: 1000px;
+  }
+}
 /* Home Section Stylings */
 @-webkit-keyframes move1 {
   from {
@@ -623,6 +684,10 @@ h1 {
 }
 
 .benefits_item i {
+  color: #1face1;
+}
+
+.benefits_item i {
   margin-right: 10px;
 }
 
@@ -630,6 +695,33 @@ h1 {
   margin-top: 19.2px;
 }
 
+@media only screen and (max-width: 844px) {
+  #benefits_section {
+    height: 600px;
+  }
+  #benefits_container h2 {
+    text-align: center;
+  }
+  #benefits_button_container {
+    text-align: center;
+  }
+  #benefits_list {
+    width: 100%;
+  }
+  .benefits_item {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #empty_benefits_container {
+    width: 0%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .benefits_item {
+    width: 70%;
+  }
+}
 #instructor_section {
   display: flex;
   justify-content: center;

@@ -33,11 +33,13 @@ const App = () => {
 
     return (
         <BrowserRouter>
+
+
+
         <div id="main_body">
 
             <Header />
 
-            
                 <Routes>
                     
                     <Route path="/" element={<Home />}> </Route>
@@ -46,15 +48,8 @@ const App = () => {
                     <Route path="/schedule" element={<Schedule />}></Route>
                     <Route path="/contact" element={<Contact />}></Route>
                 
-
                 </Routes>
-            
-
-
-            {/* <h1> title </h1>
-            <p> {apiResponse} </p>
-            <button onClick={callAPI}> get response </button> */}
-    
+        
             <Footer />
         </div>
         </BrowserRouter>

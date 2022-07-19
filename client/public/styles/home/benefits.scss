@@ -28,7 +28,12 @@
 .benefits_item {
 
     @include flex_direction_align_justify(row, center, flex-start);
-    
+
+}
+
+.benefits_item i {
+
+    color: $fourth_color;
 
 }
 
@@ -41,5 +46,74 @@
 #benefits_about_button {
 
     margin-top: 19.20px;
+
+}
+
+//media queries
+
+@media only screen and (max-width: 1448px) {
+
+
+}
+
+@media only screen and (max-width: 1182px) {
+    
+
+}
+
+@media only screen and (max-width: 992px) {
+    
+
+}
+
+@media only screen and (max-width: 844px) {
+
+    #benefits_section {
+
+        height: 600px;
+
+    }    
+
+    #benefits_container h2 {
+
+        text-align: center;
+
+    }
+
+    #benefits_button_container {
+
+        text-align: center;
+
+    }
+
+    #benefits_list {
+
+        width: 100%
+
+    }
+
+    .benefits_item {
+
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    #empty_benefits_container {
+
+        width: 0%;
+
+    }
+
+}
+
+@media only screen and (max-width: 620px) {
+
+    .benefits_item {
+
+        width: 70%;
+
+    }
 
 }

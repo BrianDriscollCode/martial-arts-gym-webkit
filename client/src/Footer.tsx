@@ -11,21 +11,26 @@ const Footer = (): any => {
 
                 <div className="footer_section" id="join_class_footer">
 
-                    <div className="footer_info">
-                        <h4> Experience Gracie Jiu Jitsu</h4>
-                        <h3> Join a Free Class or Try Out Self Defence!</h3>
+                    <div id="left_side_wrapper" >
+
+                        <div className="footer_info">
+                            <h4> Experience Gracie Jiu Jitsu</h4>
+                            <h3> Join a Free Class or Try Out Self Defence!</h3>
+                        </div>
+
+                        <div className="footer_info">
+
+                            <p> Get know our community and coaches! Join a Free Class 
+                                if you are experienced and ready to start or try a Free 
+                                1-on-1 session fro additional guidance as you get going!
+                            </p>
+
+                            <button> Book A Free Class! </button>
+
+                        </div>  
+
                     </div>
-
-                    <div className="footer_info">
-
-                        <p> Get know our community and coaches! Join a Free Class 
-                            if you are experienced and ready to start or try a Free 
-                            1-on-1 session fro additional guidance as you get going!
-                        </p>
-
-                        <button> Book A Free Class! </button>
-
-                    </div>
+                    
                 </div>
 
                 <div className="footer_section" id="logo_social_footer">
@@ -65,7 +70,7 @@ const Footer = (): any => {
                     <div className="footer_info">
                         <p> 4242 North Oracle Road, Suite 195</p>
                         <p> Tucson, AZ 85705 </p>
-                        <p> located in the Wetmore Plaza - northside of the 
+                        <p id="footer_info_location"> located in the Wetmore Plaza - northside of the 
                             building, next to ideal Image
                         </p>
                     </div>
