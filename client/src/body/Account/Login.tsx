@@ -10,8 +10,8 @@ const Login = () => {
     const callAPI = async () => {
 
         let response = await Get_Accounts.get('/awsDB');
-        console.log(response)
-        setApiResponse(response.data[0].firstName)
+        console.log(response, "-client response")
+        setApiResponse(response.data)
     }
 
     useEffect(() => {
@@ -19,6 +19,8 @@ const Login = () => {
         callAPI();
 
     }, [])
+
+    console.log(apiResponse)
 
     return  (
 
