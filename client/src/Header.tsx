@@ -1,5 +1,5 @@
 import React from "react";
-import Top from "./header/Top";
+import Top from "./header/top"
 import Navigation from "./header/Navigation"
 
 
