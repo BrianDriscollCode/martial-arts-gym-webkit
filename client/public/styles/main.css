@@ -95,6 +95,12 @@ h1 {
   padding-left: 29px;
 }
 
+#login_text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1969da;
+}
+
 @media only screen and (max-width: 1448px) {
   #top_wrapper {
     width: 80%;
@@ -393,7 +399,6 @@ h1 {
     height: 1000px;
   }
 }
-/* Home Section Stylings */
 @-webkit-keyframes move1 {
   from {
     transform: translate(0, 20px);
@@ -542,6 +547,10 @@ h1 {
           animation-name: move2;
   -webkit-animation-duration: 2.3s;
           animation-duration: 2.3s;
+}
+
+#sub_banner_title {
+  font-size: 45px;
 }
 
 #banner_arrow_container a {
@@ -768,6 +777,53 @@ h1 {
 .instructor_label h3 {
   font-size: 20px;
   margin-top: 0;
+}
+
+#login_page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#login_title {
+  width: 80%;
+  align-self: center;
+  margin-top: 2em;
+  font-size: 30px;
+}
+
+#login_page_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: none;
+  justify-content: space-between;
+  width: 80%;
+  align-self: center;
+  margin-top: 4em;
+  margin-bottom: 7em;
+}
+
+#member_login {
+  width: 48%;
+}
+
+#member_go_create_account {
+  width: 48%;
+}
+
+.login_input_container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.login_input_container input {
+  width: 70%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #a0a0a0;
+  padding-left: 15px;
+  font-size: 18px;
 }
 
 #main_body {
