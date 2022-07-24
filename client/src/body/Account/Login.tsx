@@ -2,16 +2,38 @@ import React, { useState, useEffect } from "react";
 
 import Sub_Banner from "../home/Sub_Banner";
 import Get_Accounts from "../../backendCalls/Get_Accounts";
+import axios from "axios";
 
 const Login = () => {
 
     const [apiResponse, setApiResponse] = useState([]);
+    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
 
     const callAPI = async () => {
+        console.log('run api')
+        let responsetest = await Get_Accounts.get('/awsDB');
+        console.log(responsetest, "-client response **GET**");
 
-        let response = await Get_Accounts.get('/awsDB');
-        console.log(response, "-client response")
-        setApiResponse(response.data)
+        //setApiResponse(response.data)
+    }
+
+    const login = async (passedUsername: string, passedPassword: string) => {
+        console.log('login called');
+
+
+        let response = await axios.post("http://localhost:9000/awsDB", {
+
+             data: {
+                username: passedUsername,
+                password: passedPassword
+             }
+
+        }) 
+        .then(res => {
+            console.log(res, "-client response **POST**")
+        })
+
     }
 
     useEffect(() => {
@@ -20,7 +42,7 @@ const Login = () => {
 
     }, [])
 
-    console.log(apiResponse)
+    //console.log(apiResponse)
 
     return  (
 
@@ -47,15 +69,15 @@ const Login = () => {
                 
                     <div className="login_input_container"> 
                         <span> Username </span>
-                        <input />
+                        <input onChange={(e) => setUsername(e.target.value)} />
                     </div>
 
                     <div className="login_input_container"> 
                         <span> Password </span>
-                        <input />
+                        <input onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
-                    <button className="page_button_"> LOGIN </button> 
+                    <button className="page_button_" onClick={() => login(username, password)} > LOGIN </button> 
 
                 </div> 
 

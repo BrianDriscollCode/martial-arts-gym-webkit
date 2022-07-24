@@ -12,7 +12,6 @@ const db = mysql.createConnection({
 })
 
 let connected = "not yet connected"
-let all_accounts;
 
 db.connect(err=> {
     if (err) {
@@ -23,21 +22,53 @@ db.connect(err=> {
 
     db.query("USE ACCOUNTS");
 
-    db.query("SELECT * FROM all_accounts", function (err, result, field) {
+})
 
-        if (err) throw err;
-        console.log(result)
-        all_accounts = result;
+// router.get("/", function(req, res, next) {
 
+//     res.send(all_accounts);
 
+// })
+
+// router.post("/", (req, res) => {
+
+//     var test = req.body.test;
+//     res.send(all_accounts, test);
+//     console.log(test, "server response")
+
+// })
+
+let all_accounts;
+let single_account;
+
+router.route('/')
+    .get((req, res) => {
+        
+        db.query(`SELECT * FROM all_accounts`, function (err, result, field) {
+
+            if (err) throw err;
+            console.log(result)
+            all_accounts = result;
+            res.send(all_accounts);
+    
+    
+        })
     })
+    .post((req, res) => {
+        //`SELECT * FROM all_accounts WHERE (firstName = "Brian")`
 
-})
+        let queryString = 'SELECT * FROM all_accounts WHERE (username = ' + `"` + req.body.data.username + `"` + ' AND ' + "account_password" +` = "` + req.body.data.password + `"` + ')'; 
 
-router.get("/", function(req, res, next) {
+        db.query(queryString, function (err, result, field) {
 
-    res.send(all_accounts);
-
-})
+            if (err) throw err;
+            console.log(result)
+            console.log(req.body.data.username)
+            single_account = result;
+            res.send(single_account)
+    
+    
+        })  
+    })
 
 module.exports = router
