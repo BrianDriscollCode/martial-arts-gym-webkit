@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom"; 
 
 const Top = () => {
 
@@ -42,6 +43,12 @@ const Top = () => {
                         className="social_links" 
                         size={18}
                     />
+
+                    <div className="social_links" id="login_text">
+
+                        <Link to="/login"> Login/Sign up </Link>
+
+                    </div>
 
 
                 </div>

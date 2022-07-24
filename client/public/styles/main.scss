@@ -1,15 +1,22 @@
-@import "./base_stylings.scss";
+@import "./_base_stylings.scss";
+
+//Common Page Components
+
 @import "./top.scss";
 @import "./navigation.scss";
 @import "./Footer.scss";
 
-/* Home Section Stylings */ 
+//Home Section Stylings 
 
 @import "./home/banner.scss";
 @import "./home/home.scss";
 @import "./home/first_section_home.scss";
 @import "./home/benefits.scss";
 @import "./home/Instructors.scss";
+
+
+//Account Management
+@import "./account_management/login.scss";
 
 #main_body {
 
