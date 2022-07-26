@@ -6,7 +6,8 @@ var logger = require('morgan');
 var cors = require("cors")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-awsDB = require("./routes/awsDB");
+login = require("./routes/login");
+createAccount = require("./routes/createAccount")
 
 var app = express();
 
@@ -23,7 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use("/awsDB", awsDB)
+app.use("/login", login)
+app.use("/createAccount", createAccount)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -1,7 +1,12 @@
 import React from "react";
 
+interface Props {
 
-const Sub_Banner = () => {
+    title: string,
+
+}
+
+const Sub_Banner = ( { title }: Props ) => {
 
     return (
 
@@ -16,11 +21,9 @@ const Sub_Banner = () => {
 
             <div id="inside_banner">
 
-                <h2 id="sub_banner_title"> Login </h2>
+                <h2 id="sub_banner_title"> {title} </h2>
 
             </div>
-
-
             
 
         </div>

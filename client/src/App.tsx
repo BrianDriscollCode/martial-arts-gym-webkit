@@ -11,14 +11,13 @@ import Contact from "./body/Contact";
 
 //Account Management 
 import Login from "./body/Account/Login"
+import Create_Account from "./body/Account/Create_Account"
 
 
 const App = () => {
 
     return (
         <BrowserRouter>
-
-
 
         <div id="main_body">
 
@@ -35,6 +34,7 @@ const App = () => {
 
                     {/* Account Management */}
                     <Route path="/login" element={<Login />}> </Route> 
+                    <Route path="/createAccount" element={<Create_Account />}></Route>
                 
                 
                 </Routes>

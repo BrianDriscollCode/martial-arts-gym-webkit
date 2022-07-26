@@ -16,6 +16,8 @@ type Account = {
     lastName: string,
     birth: string,
     currently_active: 0 | 1,
+    account_password: string,
+    username: string,
 
 }
 

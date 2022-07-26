@@ -3,26 +3,21 @@ import React, { useState, useEffect } from "react";
 import Sub_Banner from "../home/Sub_Banner";
 import Get_Accounts from "../../backendCalls/Get_Accounts";
 import axios from "axios";
+import { Link } from "react-router-dom" 
 
-const Login = () => {
+import { connect } from "react-redux";
+import { setCurrentAccount } from "../../actions"
 
-    const [apiResponse, setApiResponse] = useState([]);
+const Login = ( { currentAccount, setCurrentAccount }: any ) => {
+
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-
-    const callAPI = async () => {
-        console.log('run api')
-        let responsetest = await Get_Accounts.get('/awsDB');
-        console.log(responsetest, "-client response **GET**");
-
-        //setApiResponse(response.data)
-    }
 
     const login = async (passedUsername: string, passedPassword: string) => {
         console.log('login called');
 
 
-        let response = await axios.post("http://localhost:9000/awsDB", {
+        let response = await axios.post("http://localhost:9000/login", {
 
              data: {
                 username: passedUsername,
@@ -31,18 +26,12 @@ const Login = () => {
 
         }) 
         .then(res => {
-            console.log(res, "-client response **POST**")
+            setCurrentAccount("CHANGE_ACCOUNT", res)
         })
 
     }
 
-    useEffect(() => {
-
-        callAPI();
-
-    }, [])
-
-    //console.log(apiResponse)
+    console.log(currentAccount)
 
     return  (
 
@@ -50,7 +39,7 @@ const Login = () => {
 
             <div>
 
-                <Sub_Banner />
+                <Sub_Banner title="Login" />
 
             </div>
 
@@ -77,7 +66,12 @@ const Login = () => {
                         <input onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
-                    <button className="page_button_" onClick={() => login(username, password)} > LOGIN </button> 
+                    <button 
+                        className="page_button_" 
+                        onClick={() => login(username, password)} 
+                    > 
+                        LOGIN 
+                    </button> 
 
                 </div> 
 
@@ -86,7 +80,7 @@ const Login = () => {
                     <h3 className="create_section_subtitle"> New Members </h3>
                     <hr />
                     <p>Creating an account has many benefits: automatic payments, discounts, and more!</p>
-                    <button className="page_button_"> CREATE AN ACCOUNT </button> 
+                    <Link to="/createAccount"><button className="page_button_"> CREATE AN ACCOUNT </button> </Link>
                 
                 </div>
 
@@ -98,4 +92,22 @@ const Login = () => {
 
 }
 
-export default Login;
+const mapStateToProps = (state: any) => {
+
+    return { currentAccount: state.currentAccount }
+
+}
+
+export default connect(mapStateToProps, { setCurrentAccount })(Login);
+
+// const callAPI = async () => {
+    //     console.log('run api')
+    //     let responsetest = await Get_Accounts.get('/awsDB');
+    //     console.log(responsetest, "-client response **GET**");
+    // }
+
+    // useEffect(() => {
+
+    //     callAPI();
+
+    // }, [])

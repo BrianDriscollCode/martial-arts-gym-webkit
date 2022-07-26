@@ -24,20 +24,6 @@ db.connect(err=> {
 
 })
 
-// router.get("/", function(req, res, next) {
-
-//     res.send(all_accounts);
-
-// })
-
-// router.post("/", (req, res) => {
-
-//     var test = req.body.test;
-//     res.send(all_accounts, test);
-//     console.log(test, "server response")
-
-// })
-
 let all_accounts;
 let single_account;
 
