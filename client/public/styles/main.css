@@ -43,6 +43,14 @@ h1 {
   margin-left: 10px;
 }
 
+.validation_text_ {
+  color: red;
+}
+
+.success_text_ {
+  color: green;
+}
+
 /* Top Section with address, phone, email, and social links */
 #top_section {
   display: flex;
@@ -867,14 +875,6 @@ h1 {
 
 #table_cell_button button {
   margin-top: 10px;
-}
-
-.validation_text {
-  color: red;
-}
-
-#success_text {
-  color: green;
 }
 
 #main_body {

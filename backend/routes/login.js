@@ -18,7 +18,6 @@ router.route('/')
             all_accounts = result;
             res.send(all_accounts);
     
-    
         })
     })
     .post((req, res) => {

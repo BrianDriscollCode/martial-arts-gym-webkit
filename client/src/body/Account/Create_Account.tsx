@@ -46,7 +46,6 @@ const Create_Account = () => {
                 setLastName(e.target.value);
                 break;
             case "birthdate":
-    
                 if (dateSetter === "day") {
 
                     setBirthDay(e.target.value)
@@ -69,12 +68,21 @@ const Create_Account = () => {
 
     }
 
+    //This function (create_account) calls these functions:
+    // 1. validate_password - puts password through series of regular expression checks
+    // 2. validate_form - puts username, firstname, and lastname through length checks
+    // 3. submit_create_account_request - submits nested post requests. 
+    //      A) First post request checks to see if there is a matching username
+    //      B) Second post request posts the new account to database if there is
+    //         no matching username from the first post request
+
     const create_account = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
 
         e.preventDefault();
 
         let passReqFulfilled: boolean =  validate_password(password);
 
+        //Validate form params accepts form string and submits a "type" for the function logic
         let userReqFulfilled: boolean = validate_form(username, "username");
         let firstNameReqFulfilled: boolean = validate_form(firstName, "firstName");
         let lastNameReqFulfilled: boolean = validate_form(lastName, "lastName");
@@ -120,7 +128,6 @@ const Create_Account = () => {
             .then(() => {
 
                 console.log('post request run');
-                console.log(single_account.data.length, "- data length")
                 if (single_account.data.length < 1) {
                     let response = axios.post("http://localhost:9000/createAccount", {
 
@@ -147,22 +154,19 @@ const Create_Account = () => {
                     setAccountSubmitted(false)
 
                 }
-                
-
             })
-                    
     }
 
     const validate_password = (password:string): boolean => {
         
         //test lowercase letters
-        let checkLowercaseREGEX = /[a-z]/;
+        let checkLowercaseREGEX: RegExp = /[a-z]/;
         //test uppercase letters
-        let checkUppercaseREGEX = /[A-Z]/;
+        let checkUppercaseREGEX: RegExp = /[A-Z]/;
         //test digits
-        let checkDigitsREGEX = /\d/;
+        let checkDigitsREGEX: RegExp = /\d/;
         //test special characters
-        let checkSpecialCharREGEX = /[!@#$%^&*()+=/\<>`~?,.-]/;
+        let checkSpecialCharREGEX: RegExp = /[!@#$%^&*()+=/\<>`~?,.-]/;
 
         if (
             checkLowercaseREGEX.test(password)
@@ -170,15 +174,15 @@ const Create_Account = () => {
             && checkDigitsREGEX.test(password)
             && checkSpecialCharREGEX.test(password)
         ) 
-        {
-            setShowPasswordValidationText(false)
-            return true
-        } 
+            {
+                setShowPasswordValidationText(false)
+                return true
+            } 
         else 
-        {
-            setShowPasswordValidationText(true)
-            return false
-        }
+            {
+                setShowPasswordValidationText(true)
+                return false
+            }
 
     }
 
@@ -231,10 +235,6 @@ const Create_Account = () => {
 
             return false;
         }
-
-     
-
-
     }
 
     const print_days_selection = () => {
@@ -307,7 +307,7 @@ const Create_Account = () => {
                         </th>
                         <span 
                             style={ {opacity: showUsernameValidationText ? '1' : '0' }}
-                            className="validation_text"
+                            className="validation_text_"
                         > 
                             {usernameValidationText}
                         </span>
@@ -320,7 +320,7 @@ const Create_Account = () => {
                         </th>
                         <span 
                             style={ {opacity: showPasswordValidationText ? '1' : '0' }}
-                            className="validation_text"
+                            className="validation_text_"
                         > 
                             include upper and lowercase, number, and special character 
                         </span>
@@ -333,7 +333,7 @@ const Create_Account = () => {
                         </th>
                         <span 
                             style={ {opacity: showFirstNameValidationText ? '1' : '0' }}
-                            className="validation_text"
+                            className="validation_text_"
                         > 
                             Must be longer than 2 characters
                         </span>
@@ -346,7 +346,7 @@ const Create_Account = () => {
                         </th>
                         <span 
                             style={ {opacity: showLastNameValidationText ? '1' : '0' }}
-                            className="validation_text"
+                            className="validation_text_"
                         > 
                             Must be longer than 2 characters
                         </span>
@@ -414,7 +414,7 @@ const Create_Account = () => {
 
                         <th>
                             <span 
-                                id="success_text"
+                                className="success_text_"
                                 style={{opacity: accountSubmitted ? '1' : '0'}}
                             > 
                             Success </span>

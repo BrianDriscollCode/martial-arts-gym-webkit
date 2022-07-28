@@ -27,7 +27,7 @@ router.route('/compare')
         db.query(queryString2, function (err, result, field) {
             
             let account_name = result;
-            console.log(req.body.data.username, "username")
+            console.log(req.body.data.username, "username");
             res.send(result);
 
         })

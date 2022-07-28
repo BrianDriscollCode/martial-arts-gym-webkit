@@ -66,6 +66,18 @@ h1 {
 
 }
 
+.validation_text_ {
+
+    color: red;
+
+}
+
+.success_text_ {
+
+    color:green;
+
+}
+
 @mixin flex_direction_align_justify($direction, $itemAlign, $justify) {
     display: flex;
     flex-direction: $direction;

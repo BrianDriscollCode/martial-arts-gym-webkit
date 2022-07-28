@@ -1,8 +1,9 @@
 import React from "react";
 import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom"; 
+import { connect } from "react-redux"
 
-const Top = () => {
+const Top = ( { currentAccount }: any ) => {
 
     return (
 
@@ -45,8 +46,14 @@ const Top = () => {
                     />
 
                     <div className="social_links" id="login_text">
+                        
+                            {
 
-                        <Link to="/login"> Login/Sign up </Link>
+                                currentAccount.username === 'test' ? 
+                                    <Link to="/login"> Login/Sign up </Link> :  
+                                    <Link to="/account"> {currentAccount.data[0].username} </Link>
+
+                            } 
 
                     </div>
 
@@ -61,4 +68,10 @@ const Top = () => {
 
 }
 
-export default Top
+const mapStateToProps = (state: any) => {
+
+    return { currentAccount: state.currentAccount }; 
+
+}
+
+export default connect(mapStateToProps)(Top)

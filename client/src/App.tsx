@@ -12,7 +12,7 @@ import Contact from "./body/Contact";
 //Account Management 
 import Login from "./body/Account/Login"
 import Create_Account from "./body/Account/Create_Account"
-
+import Personal_Account from "./body/Account/Personal_Account";
 
 const App = () => {
 
@@ -35,6 +35,7 @@ const App = () => {
                     {/* Account Management */}
                     <Route path="/login" element={<Login />}> </Route> 
                     <Route path="/createAccount" element={<Create_Account />}></Route>
+                    <Route path="/account" element={<Personal_Account/>}> </Route>
                 
                 
                 </Routes>
@@ -44,8 +45,6 @@ const App = () => {
         </BrowserRouter>
     
     )
-    
-    
 
 }
 

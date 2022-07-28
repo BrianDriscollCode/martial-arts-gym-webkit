@@ -12,9 +12,13 @@ const Login = ( { currentAccount, setCurrentAccount }: any ) => {
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
 
+    const [showSuccessText, setShowSuccessText] = useState(false);
+    const [showFailureText, setShowFailureText] = useState(false);
+    const [validationText, setValidationText] = useState('Success');
+
     const login = async (passedUsername: string, passedPassword: string) => {
         console.log('login called');
-
+        let local_account_variable: any; 
 
         let response = await axios.post("http://localhost:9000/login", {
 
@@ -25,17 +29,23 @@ const Login = ( { currentAccount, setCurrentAccount }: any ) => {
 
         }) 
         .then(res => {
-            setCurrentAccount("CHANGE_ACCOUNT", res)
+            local_account_variable = res
+
+            if (local_account_variable.data.length > 0) {
+                setCurrentAccount("CHANGE_ACCOUNT", res)
+                setShowSuccessText(true);
+                setShowFailureText(false);
+            } else {
+                setShowSuccessText(false);
+                setShowFailureText(true);
+            }
         })
-
+        
     }
-
-    console.log(currentAccount)
 
     return  (
 
         <div id="login_page"> 
-
             <div>
 
                 <Sub_Banner title="Login" />
@@ -72,6 +82,21 @@ const Login = ( { currentAccount, setCurrentAccount }: any ) => {
                         LOGIN 
                     </button> 
 
+                    <span 
+                        style={{
+                            opacity: showSuccessText ? '1' : '0',
+                            display: showSuccessText ? 'inline' : 'none'
+                        }}
+                        className="success_text_"
+                    > Success </span> 
+
+                    <span style={{
+                        opacity: showFailureText ? '1' : '0',
+                        display: showFailureText ? 'inline' : 'none'
+                        }}
+                        className="validation_text_"
+                    > No matching username or password </span> 
+
                 </div> 
 
                 <div id="member_go_create_account"> 
@@ -98,15 +123,3 @@ const mapStateToProps = (state: any) => {
 }
 
 export default connect(mapStateToProps, { setCurrentAccount })(Login);
-
-// const callAPI = async () => {
-    //     console.log('run api')
-    //     let responsetest = await Get_Accounts.get('/awsDB');
-    //     console.log(responsetest, "-client response **GET**");
-    // }
-
-    // useEffect(() => {
-
-    //     callAPI();
-
-    // }, [])

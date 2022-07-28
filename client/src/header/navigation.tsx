@@ -1,7 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { connect } from "react-redux"
 
-const Navigation = () => {
+const Navigation = ( { currentAccount }: any ) => {
+
+    const printAccount = () => {
+
+        console.log(currentAccount)
+
+    }
 
     return (
 
@@ -23,7 +30,7 @@ const Navigation = () => {
                     <Link to="/about" className="outer_nav_link"></Link><div 
                         id="free_pass_button"
                     > 
-                        <a> GET A FREE PASS </a> 
+                        <a onClick={printAccount}> GET A FREE PASS </a> 
                     </div>
 
 
@@ -38,4 +45,10 @@ const Navigation = () => {
 
 }
 
-export default Navigation
+const mapStateToProps = (state: any) => {
+
+        return { currentAccount: state.currentAccount }
+
+}
+
+export default connect(mapStateToProps)(Navigation)
