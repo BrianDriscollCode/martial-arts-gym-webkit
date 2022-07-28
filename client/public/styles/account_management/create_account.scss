@@ -1,15 +1,13 @@
 .table_cell {
 
     @include create_row_or_column(column);
-    margin-bottom: 10px;
-
 
 }
 
 .table_cell label {
 
     align-self: start;
-    margin-bottom: 5px;
+    
 
 }
 
@@ -25,7 +23,6 @@
 #account_form_container {
 
     width:  80%;
-    
     margin: 4em auto 5em auto;
     @include flex_direction_align_justify(column, center, center)
 
@@ -51,5 +48,17 @@
 #table_cell_button button {
 
     margin-top: 10px;
+
+}
+
+.validation_text {
+
+    color: red;
+
+}
+
+#success_text {
+
+    color:green;
 
 }

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import Sub_Banner from "../home/Sub_Banner";
-import Get_Accounts from "../../backendCalls/Get_Accounts";
 import axios from "axios";
 import { Link } from "react-router-dom" 
 

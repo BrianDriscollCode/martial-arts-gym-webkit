@@ -1,44 +1,37 @@
 const mysql = require("mysql");
 var express = require("express");
 var router = express.Router();
-
-const db = mysql.createConnection({
-    host: "aws-fitness-db.clphvgvftlzr.us-west-1.rds.amazonaws.com",
-    port: "3306",
-    user: "admin",
-    password: "Imcool123!",
-    database: "",
-
-})
+var db = require('./AWS_CONNECTION')
 
 let connected = "not yet connected"
 
-db.connect(err=> {
-    if (err) {
-        console.log(err.message)
-        return;
-    }
-    console.log("Database connected");
-
-    db.query("USE ACCOUNTS");
-
-})
 
 router.route('/')
-    .get((req, res) => {
-    
-        db.query(`INSERT INTO all_accounts (firstName, lastName, birth, currently_active) VALUES ('Brian1', 'Townsend1', '1995-05-26', true)`, function (err, result, field) {
-      
+    .post((req, res) => {
+
+        let queryString = `INSERT INTO all_accounts (firstName, lastName, birth, currently_active, account_password, username) VALUES ("` + req.body.data.firstname + `", "` + req.body.data.lastname + `", "` + req.body.data.birthdate + `", false, "` + req.body.data.password + `", "` + req.body.data.username + `")`
+
+        db.query(queryString, function (err, result, field) {
+
             res.send;
     
+        })  
+    })
+
+router.route('/compare')
+    .post((req, res) => {
+            
+        let queryString2 = 'SELECT * FROM all_accounts WHERE (username = ' + `"` + req.body.data.username + `"` + `)`;
+        //let queryString = `INSERT INTO all_accounts (username) VALUES ("` + req.body.data.username + `")`
+
+        db.query(queryString2, function (err, result, field) {
+            
+            let account_name = result;
+            console.log(req.body.data.username, "username")
+            res.send(result);
+
         })
     })
-    // .post((req, res) => {
-
-    //     db.query(`PUT QUERY HERE`, function (err, result, field) {
-
     
-    //     })  
-    // })
 
 module.exports = router

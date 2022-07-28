@@ -829,12 +829,10 @@ h1 {
 .table_cell {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .table_cell label {
   align-self: start;
-  margin-bottom: 5px;
 }
 
 .table_cell input, .table_cell select {
@@ -862,10 +860,6 @@ h1 {
   margin: 2em auto 0 auto;
 }
 
-#title_create_account {
-  font-size: 30px;
-}
-
 #birth_date_header {
   align-self: center;
   margin: 0 0 10px 0;
@@ -873,6 +867,14 @@ h1 {
 
 #table_cell_button button {
   margin-top: 10px;
+}
+
+.validation_text {
+  color: red;
+}
+
+#success_text {
+  color: green;
 }
 
 #main_body {
