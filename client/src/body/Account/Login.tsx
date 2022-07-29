@@ -72,7 +72,7 @@ const Login = ( { currentAccount, setCurrentAccount }: any ) => {
 
                     <div className="login_input_container"> 
                         <span> Password </span>
-                        <input onChange={(e) => setPassword(e.target.value)} />
+                        <input type="password" onChange={(e) => setPassword(e.target.value)} />
                     </div>
 
                     <button 

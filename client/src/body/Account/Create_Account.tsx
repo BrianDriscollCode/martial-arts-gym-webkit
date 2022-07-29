@@ -316,7 +316,7 @@ const Create_Account = () => {
                     <tr>
                         <th className="table_cell">
                             <label htmlFor="password"> Password </label>
-                            <input id="passowrd_input" onChange={(e) => handleChange(e, "password")} />
+                            <input id="passowrd_input" type="password" onChange={(e) => handleChange(e, "password")} />
                         </th>
                         <span 
                             style={ {opacity: showPasswordValidationText ? '1' : '0' }}
@@ -358,36 +358,36 @@ const Create_Account = () => {
                             <label htmlFor="birth_date" id="birth_date_header"> Birth Date </label>
 
                             <div>
-                            <label> Month: </label>
-                            <select onChange={(e) => handleChange(e, "birthdate", "month")}>
-                                <option value="01"> January </option>
-                                <option value="02"> February </option>
-                                <option value="03"> March </option>
-                                <option value="04"> April </option>
-                                <option value="05"> May </option>
-                                <option value="06"> June </option>
-                                <option value="07"> July </option>
-                                <option value="08"> August </option>
-                                <option value="09"> September </option>
-                                <option value="10"> October </option>
-                                <option value="11"> November </option>
-                                <option value="12"> December </option>
-                            </select>
+                                <label> Month: </label>
+                                <select onChange={(e) => handleChange(e, "birthdate", "month")}>
+                                    <option value="01"> January </option>
+                                    <option value="02"> February </option>
+                                    <option value="03"> March </option>
+                                    <option value="04"> April </option>
+                                    <option value="05"> May </option>
+                                    <option value="06"> June </option>
+                                    <option value="07"> July </option>
+                                    <option value="08"> August </option>
+                                    <option value="09"> September </option>
+                                    <option value="10"> October </option>
+                                    <option value="11"> November </option>
+                                    <option value="12"> December </option>
+                                </select>
 
-                            <label> Day: </label>
-                            <select onChange={(e) => handleChange(e, "birthdate", "day")}>
+                                <label> Day: </label>
+                                <select onChange={(e) => handleChange(e, "birthdate", "day")}>
 
-                                {print_days_selection()}
+                                    {print_days_selection()}
 
-                            </select>
-                            
-
-                            <label> Year: </label>
-                            <select onChange={(e) => handleChange(e, "birthdate", "year")}>
+                                </select>
                                 
-                                {print_years_selection()}
-                            
-                            </select>
+
+                                <label> Year: </label>
+                                <select onChange={(e) => handleChange(e, "birthdate", "year")}>
+                                    
+                                    {print_years_selection()}
+                                
+                                </select>
 
                             </div>
 

@@ -57,3 +57,47 @@
     font-size: 18px;
 
 }
+
+//media queries
+
+@media only screen and (max-width: 1448px) {
+
+
+}
+
+@media only screen and (max-width: 1182px) {
+    
+
+}
+
+@media only screen and (max-width: 992px) {
+    
+
+}
+
+@media only screen and (max-width: 844px) {
+
+
+}
+
+@media only screen and (max-width: 620px) {
+
+    #login_page_wrapper {
+
+        @include flex_direction_align_justify(column, none, space-between);
+    
+    }
+
+    #member_login {
+
+        width: 100%;
+
+    }
+
+    #member_go_create_account {
+
+        width: 100%;
+
+    }
+
+}

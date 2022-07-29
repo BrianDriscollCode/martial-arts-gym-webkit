@@ -1,6 +1,6 @@
 import React from "react";
 import Top from "./header/top";
-import Navigation from "./header/Navigation"
+import Navigation from "./header/navigation"
 
 
 const Header = () => {
