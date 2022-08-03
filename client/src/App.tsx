@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./body/home/Home";
 import About from "./body/about/About";
 import Schedule from "./body/Schedule";
-import Classes from "./body/Classes";
+import Classes from "./body/classes/Classes";
 import Contact from "./body/Contact";
 
 //Account Management 

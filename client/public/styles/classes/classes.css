@@ -1,0 +1,14 @@
+#classes_page_wrapper {
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#classes_header_section h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+.class_section {
+  height: 400px;
+}/*# sourceMappingURL=classes.css.map */

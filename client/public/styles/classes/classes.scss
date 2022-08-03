@@ -1,0 +1,53 @@
+#classes_page_wrapper {
+
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4em;
+
+}
+
+#classes_header_section h2{
+
+    font-size: 45px;
+    text-align: center;
+
+}
+
+#classes_container {
+
+    margin-top: 3em;
+
+}
+
+.class_section {
+
+    height: 375px;
+    @include create_row_or_column(row);
+    -webkit-box-shadow: 0px 4px 22px -3px rgba(94,93,94,1);
+    -moz-box-shadow: 0px 4px 22px -3px rgba(94,93,94,1);
+    box-shadow: 0px 4px 22px -3px rgba(94,93,94,1);
+
+
+}
+
+.class_section_text_area {
+
+    @include flex_direction_align_justify(column, center, center);
+    width: 500px;
+    height: 100%;
+    padding: 0 20px 0 20px;
+}
+
+.class_section_image {
+
+    width: 500px;
+
+}
+
+.class_section_text_area h3 {
+
+    text-align: center;
+    font-size: 30px;
+
+}

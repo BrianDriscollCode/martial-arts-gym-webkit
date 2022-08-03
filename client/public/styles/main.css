@@ -873,6 +873,49 @@ h1 {
     height: auto;
   }
 }
+#classes_page_wrapper {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+}
+
+#classes_header_section h2 {
+  font-size: 45px;
+  text-align: center;
+}
+
+#classes_container {
+  margin-top: 3em;
+  border-radius: 15px;
+}
+
+.class_section {
+  height: 375px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 4px 22px -3px rgb(94, 93, 94);
+}
+
+.class_section_text_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 100%;
+  padding: 0 20px 0 20px;
+}
+
+.class_section_image {
+  width: 500px;
+}
+
+.class_section_text_area h3 {
+  text-align: center;
+  font-size: 30px;
+}
+
 #login_page {
   display: flex;
   justify-content: center;
