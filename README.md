@@ -2,7 +2,7 @@
 
 This application was built to create an easily adjustable design so it can be fitted for different gym businesses.
 
-##To Start
+## To Start
 
 Use ``` npm start ``` in client folder for frontend.
 
