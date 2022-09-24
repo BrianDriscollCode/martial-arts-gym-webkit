@@ -21,6 +21,8 @@ Not yet implemented in deployment. This is a NODEjs backend that connects to an 
 ### Routes
 
 ./backend/routes/AWS_CONNECTION - connects to AWS database
+
 ./backend/routes/createAccount - uses get and post requests and strings formed into MySQL Queries to send input to AWD for account creation.
+
 ./backend/routes/login - uses get and post requests and strings formed into MySQL Queries to find accounts in database.
 
