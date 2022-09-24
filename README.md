@@ -5,8 +5,8 @@ This application was built to create an easily adjustable design so it can be fi
 ##To Start
 
 Use ``` npm start ``` in client folder for frontend.
-use ``` npm start ``` in backend folder for backend.
 
+Use ``` npm start ``` in backend folder for backend.
 
 ## Frontend 
 
