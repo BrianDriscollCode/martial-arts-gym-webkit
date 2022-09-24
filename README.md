@@ -2,6 +2,12 @@
 
 This application was built to create an easily adjustable design so it can be fitted for different gym businesses.
 
+##To Start
+
+Use ``` npm start ``` in client folder for frontend.
+use ``` npm start ``` in backend folder for backend.
+
+
 ## Frontend 
 
 --Inside ./client
