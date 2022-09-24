@@ -1,8 +1,12 @@
 import React from "react"
 import { FaCheck } from "react-icons/fa"
+import { Link } from "react-router-dom"; 
 
 const Benefits = () => {
 
+    const scroll = () => {
+        window.scrollTo(0, 0);
+    }
 
     return (
 
@@ -43,7 +47,7 @@ const Benefits = () => {
                     </div>
 
                     <div id="benefits_button_container">
-                        <button className="page_button_" id="benefits_about_button"> About  </button>
+                        <Link to="/about" onClick={() => scroll()}> <button className="page_button_" id="benefits_about_button"> About  </button> </Link>
                     </div>
                 </div>
 

@@ -35,6 +35,10 @@ h1 {
   border: none;
 }
 
+.page_button_:hover {
+  background-color: #3663a1;
+}
+
 .first_button_spacing_ {
   margin-right: 10px;
 }
@@ -887,7 +891,6 @@ h1 {
 
 #classes_container {
   margin-top: 3em;
-  border-radius: 15px;
 }
 
 .class_section {

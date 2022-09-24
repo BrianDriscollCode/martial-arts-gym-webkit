@@ -10,6 +10,10 @@ const Banner = ( { banners }: any ) => {
     const [chooseBanner, setChooseBanner] = useState(2);
     const nanoId = require('nano-id')
 
+    const scroll = () => {
+        window.scrollTo(0, 0);
+    }
+
     useEffect(() => {
 
         const interval = setInterval(() => {
@@ -55,7 +59,7 @@ const Banner = ( { banners }: any ) => {
                         <p> {banners[0].tagline} </p>
                     
                         <div id="banner_button_container">
-                            <button id="lone_button" className="banner_button"> See Classes </button> 
+                            <Link to="/classes" onClick={() => scroll()}><button id="lone_button" className="banner_button"> See Classes </button> </Link>
                         </div>
                                 
                         
@@ -96,8 +100,8 @@ const Banner = ( { banners }: any ) => {
                         <p> {banners[1].tagline} </p>
                     
                         <div id="banner_button_container">
-                            <button id="button1" className="banner_button"> Adults </button> 
-                            <button id="button2" className="banner_button"> Kids </button>
+                            <Link to="/classes" onClick={() => scroll()}> <button id="button1" className="banner_button"> Adults </button> </Link>
+                            <Link to="/classes" onClick={() => scroll()}> <button id="button2" className="banner_button"> Kids </button></Link>
                         </div>
                                 
                         

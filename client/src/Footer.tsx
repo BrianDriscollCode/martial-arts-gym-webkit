@@ -1,7 +1,14 @@
 import React from "react";
 import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa"
+import { Link } from "react-router-dom";
 
 const Footer = (): any => {
+
+    const scroll = () => {
+
+        window.scrollTo(0, 0);
+
+    }
 
     return (
 
@@ -25,7 +32,13 @@ const Footer = (): any => {
                                 1-on-1 session fro additional guidance as you get going!
                             </p>
 
+                            <Link 
+                                to="/classes"
+                                onClick={() => scroll()}
+                            > 
+                            
                             <button> Book A Free Class! </button>
+                            </Link>
 
                         </div>  
 

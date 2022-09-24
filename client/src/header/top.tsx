@@ -44,7 +44,7 @@ const Top = ( { currentAccount }: any ) => {
                         className="social_links" 
                         size={18}
                     />
-
+{/* 
                     <div className="social_links" id="login_text">
                         
                             {
@@ -55,7 +55,7 @@ const Top = ( { currentAccount }: any ) => {
 
                             } 
 
-                    </div>
+                    </div> */}
 
 
                 </div>

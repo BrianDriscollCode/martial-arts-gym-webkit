@@ -1,7 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 
 const First_Section = () => {
 
+
+    const scroll = () => {
+        window.scrollTo(0, 0);
+    }
 
     return (
 
@@ -21,8 +26,8 @@ const First_Section = () => {
                     <p> Paulo Fernando is the head instructor of San Diego Brazilian Jiu Jitsu Academy & Mixed Martial Arts and was promoted to a 4th degree black belt by Master Carlson Gracie Senior on November 13th of 2005. Today Mr. Fernando is a 6th Degree Black belt in Brazilian Jiu Jitsu and 6th Degree Red and White belt in Judo. </p>
 
                     <div>
-                        <button className="page_button_ first_button_spacing_"> Learn more </button>
-                        <button className="page_button_ second_button_spacing_"> See Classes </button>
+                        <Link to="/about" onClick={() => scroll()}> <button className="page_button_ first_button_spacing_"> Learn more </button></Link>
+                        <Link to="/classes" onClick={() => scroll()}> <button className="page_button_ second_button_spacing_"> See Classes </button></Link>
                     </div>
 
 
@@ -37,7 +42,7 @@ const First_Section = () => {
                             <iframe 
                             width="624"
                             height="351"
-                            src="https://www.youtube.com/embed/lG4d4cy90Tc"
+                            src="https://www.youtube.com/embed/Xtsw6DCAPYc"
                             title="YouTube video player" 
                             frameBorder="0" 
                             className="video_iframe">

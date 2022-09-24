@@ -25,13 +25,11 @@ const Navigation = ( { currentAccount }: any ) => {
                     <Link to="/" className="outer_nav_link"><div className="nav_link">  HOME  </div></Link>
                     <Link to="/about" className="outer_nav_link"><div className="nav_link">  ABOUT  </div></Link>
                     <Link to="/classes" className="outer_nav_link"><div className="nav_link">  CLASSES  </div></Link>
-                    <Link to="/schedule" className="outer_nav_link"><div className="nav_link">  SCHEDULE  </div></Link>
-                    <Link to="/contact" className="outer_nav_link"><div className="nav_link">  CONTACT </div></Link>
-                    <Link to="/about" className="outer_nav_link"></Link><div 
+                    <Link to="/about" className="outer_nav_link"><div 
                         id="free_pass_button"
                     > 
                         <a onClick={printAccount}> GET A FREE PASS </a> 
-                    </div>
+                    </div></Link>
 
 
                 </div>

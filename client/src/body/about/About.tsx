@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Free_Class_Form from "./Free_Class_Form";
 import Sub_Banner from "../home/Sub_Banner";
 
 const About = () => {
+
+    const [formFilled, setFormFilled] = useState(true);
 
     return (
 
@@ -39,14 +41,31 @@ const About = () => {
 
                 </div>
                 
-                <div id="about_page_section_right">
+                {
+                    formFilled === true ?
+                        <div id="about_page_section_right">
 
-                    <img src="/images/about/about_page_image.jpg" width="550" height="auto" /> 
-                    <h4> Join Now! Schedule a Free Week! </h4>
-                    <Free_Class_Form />
-                    <button className="page_button_" id="about_button_submit"> SUBMIT </button>
+                            <img src="/images/about/about_page_image.jpg" width="550" height="auto" /> 
+                            
+                            <h4> Join Now! Schedule a Free Week! </h4>
+                            <Free_Class_Form />
+                            <button 
+                                className="page_button_" 
+                                id="about_button_submit"
+                                onClick={() => setFormFilled(false)}
+                            > 
+                                SUBMIT 
+                            </button>
 
-                </div>
+                        </div> :
+
+                        <div id="about_page_section_right">
+
+                            <img src="/images/about/about_page_image.jpg" width="550" height="auto" /> 
+                            <h4> Sending your free pass!  </h4>
+                        </div>
+
+                }
             </div>
         </div>
 
